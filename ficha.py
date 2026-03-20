@@ -39,9 +39,9 @@ def ficha():
     print("Nombre:", nombre_completo.title())
     print("Email:", email.lower())
     print("Caracteres en nombre:", len(nombre_completo))
-    print("Iniciales:", f"{nombre_completo[0].upper()}{nombre_completo[nombre_completo.find(" ") + 1].upper()}", )
-    print("Usuario:",
-          f"{(nombre_completo[nombre_completo.find(" ") + 1:]).lower()}.{(nombre_completo[0:nombre_completo.find(" ")]).lower()}")
+    # Cambiamos las comillas del espacio " " por comillas simples ' '
+    print("Iniciales:", f"{nombre_completo[0].upper()}{nombre_completo[nombre_completo.find(' ') + 1].upper()}")
+    print("Usuario:", f"{(nombre_completo[nombre_completo.find(" ") + 1:]).lower()}.{(nombre_completo[0:nombre_completo.find(" ")]).lower()}")
     print("Email valido:", "@" in email)
     print("Dominio:", email.lower()[email.find("@") + 1:])
     print("Nombre para archivo:", nombre_completo.replace(" ", "_").title())
@@ -55,4 +55,3 @@ def ficha():
     print("Promedio entero:", int((int(tres_notas[0]) + int(tres_notas[1]) + int(tres_notas[2])) / 3))
     print("=" * 24)
 
-# ficha()
